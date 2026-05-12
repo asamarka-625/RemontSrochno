@@ -9,7 +9,9 @@ export default defineConfig({
       'test.botifybiz.ru'
     ],
     hmr: {
-      path: '/remont-srochno/vite-hmr', // Отдельный путь для WebSocket
+      protocol: 'wss', 
+      host: 'test.botifybiz.ru',
+      path: '/remont-srochno/@vite/client'
     },
     watch: {
        usePolling: false, // true важно для Hot Reload на Windows/WSL
