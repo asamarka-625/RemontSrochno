@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite'
 
-// https://vite.dev/config/
 export default defineConfig({
+  base: '/remont-srochno/', 
+
   server: {
     host: true, // разрешает подключения извне (необходимо для Docker)
     port: 5173,
@@ -11,7 +12,7 @@ export default defineConfig({
     hmr: {
       protocol: 'wss', 
       host: 'test.botifybiz.ru',
-      path: '/remont-srochno/@vite/client'
+      path: '@vite/client'
     },
     watch: {
        usePolling: false, // true важно для Hot Reload на Windows/WSL
