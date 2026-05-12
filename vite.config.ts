@@ -8,6 +8,9 @@ export default defineConfig({
     allowedHosts: [
       'test.botifybiz.ru'
     ],
+    hmr: {
+      path: '/remont-srochno/vite-hmr', // Отдельный путь для WebSocket
+    },
     watch: {
        usePolling: false, // true важно для Hot Reload на Windows/WSL
     },
